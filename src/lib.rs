@@ -331,7 +331,7 @@ impl<'de, N: IpNet> serde::Deserialize<'de> for IpRange<N> {
 }
 
 /// An abstraction for IP networks.
-pub trait IpNet: ToNetwork<Self> + fmt::Debug + Ord + Copy
+pub trait IpNet: ToNetwork<Self> + fmt::Debug + Ord + Clone
 where
     Self: Sized,
 {
